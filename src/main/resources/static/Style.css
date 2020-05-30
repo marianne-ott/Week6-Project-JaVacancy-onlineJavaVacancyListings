@@ -1,0 +1,230 @@
+/*
+
+Orange: #F89917
+Blue: #5283A2
+Black: #000523
+
+*/
+
+body {
+    margin: 0px;
+}
+
+h1 {
+    color: #5283A2;
+}
+
+.logo {
+    overflow: hidden;
+    width: 100vw;
+}
+
+.menuDivs {
+    margin-bottom: 16px;
+}
+.addVacancyLink {
+   float: right;
+    margin: 5px;
+    padding: 5px;
+    background-color: orange;
+    border-color: orange;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+#filterButtons {
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#filterButtons a {
+    margin: 5px;
+    padding: 5px;
+    background-color: #5283A2;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.submittButton {
+    margin: 10px;
+    padding: 10px;
+    background-color: #5283A2;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    border: none;
+}
+
+
+.content {
+    background-color: white;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    width: 700px;
+}
+
+#searchDiv {
+    width: 50%;
+    margin: auto;
+}
+
+
+
+#searchForm {
+    margin: auto;
+    display: table;
+}
+
+#searchTextField {
+    width: 245px;
+}
+
+.searchResultMenu {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.otherVacancies {
+    margin-top: 60px
+}
+
+#addVacancyForm {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#addVacancyForm h1 {
+    text-align: center;
+}
+
+#addVacancyForm input, textarea {
+    width: 250px;
+    display: block;
+    padding: 9px;
+    margin-bottom: 5px;
+}
+
+#addVacancyForm select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 9px;
+    width: 270px;
+    display: block;
+    border-radius: 0px;
+    margin-bottom: 5px;
+    border-color: rgb(238, 238, 238);
+    background-color: white;
+    border-width: 2px;
+}
+
+#addVacancyForm #addVacancyPublishButton {
+    width: 48%;
+    background-color: #5283A2;
+    display: inline-block;
+    margin-right: 5px;
+    color: white;
+}
+
+#addVacancyForm #addVacancyCancelButton {
+    font-size: 13px;
+    color: #5283A2;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 48%;
+}
+
+#applyBackButton, #applyButton {
+    font-size: 13px;
+    color: #5283A2;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 22%;
+}
+
+#applyButton {
+    background-color: #5283A2;
+    padding: 9px;
+    color: white;
+}
+
+#applicationForm {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#applicationForm input, textarea {
+    width: 250px;
+    display: block;
+    padding: 9px;
+    margin-bottom: 5px;
+}
+
+#applicationForm #applicationSubmittButton {
+    width: 48%;
+    background-color: #5283A2;
+    display: inline-block;
+    margin-right: 5px;
+    color: white;
+}
+
+#applicationForm #applicationCancelButton {
+    font-size: 13px;
+    color: #5283A2;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 48%;
+}
+
+#applicationHeader {
+    text-align: center;
+}
+
+#successBackButton {
+    width: 22%;
+    background-color: #5283A2;
+    display: inline-block;
+    margin-right: 5px;
+    color: white;
+    padding: 9px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+.successPage {
+    height: 55vh;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+footer {
+    color: black;
+    padding: 25px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+#footerLogo {
+    font-size: 20px;
+    font-weight: bold;
+}

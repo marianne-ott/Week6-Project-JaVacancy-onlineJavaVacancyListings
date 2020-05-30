@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Application</title>
+    <link type="text/css" rel="stylesheet" href="/Style.css">
+</head>
+<body>
+    <div th:replace="templates :: logo"></div>
+    <div class="content">
+        <div id="applicationHeader">
+            <h1>Application Form</h1>
+            <div th:object="${vacancy}">
+                <h3 th:text="'Job Title: ' + *{jobTitle}"></h3>
+                <p th:text="'Company: ' + *{companyName}"></p>
+            </div>
+        </div>
+
+        <div id="applicationForm">
+            <form th:action="'/application/' + ${id}" method="POST" th:object="${application}">
+                <input required type="text" name="firstName" th:field="*{firstName}" placeholder="First Name" autofocus>
+                <input required type="text" name="lastName" th:field="*{lastName}" placeholder="Last Name">
+                <input required type="text" name="email" th:field="*{email}" placeholder="Email">
+                <input required type="text" name="phoneNumber" th:field="*{phoneNumber}" placeholder="Phone Number">
+                <textarea required name="applicationText" id="" cols="30" rows="10" th:field="*{applicationText}" placeholder="Tell us why you are perfect for this job..."></textarea>
+                <input type="submit" value="Apply" id="applicationSubmittButton">
+                <a href="/" id="applicationCancelButton">Cancel</a>
+            </form>
+
+        </div>
+    </div>
+    <div th:replace="templates :: footer"></div>
+</body>
+</html>

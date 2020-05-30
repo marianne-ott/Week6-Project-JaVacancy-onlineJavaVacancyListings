@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Templates</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div th:fragment="userLogin">
+        <div th:if="${session.userName==null}">
+            <p>You have to sign up to see this..</p>
+            <a href="/">Sign up here</a>
+        </div>
+    </div>
+
+    <div th:fragment="logo">
+        <a href="/"><img src="/Bilde1.png" alt="Logo til jaVacancy" class="logo" href="/"></a>
+    </div>
+
+
+    <div th:fragment="footer">
+        <footer>
+            <div>Copyright © 2020 - jaVacancy | info@jaVacancy.com | 23009070 </div>
+            <div id="footerLogo"> jaVacancy </div>
+        </footer>
+    </div>
+
+</body>
+</html>

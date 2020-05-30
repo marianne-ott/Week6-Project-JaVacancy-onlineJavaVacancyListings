@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Vacancy</title>
+    <link type="text/css" rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div th:replace="templates :: logo"></div>
+    <div class="content">
+        <form action="/add" method="POST" th:object="${vacancy}" id="addVacancyForm">
+            <h1>Add vacancy</h1>
+            <input type="text" name="title" th:field="*{jobTitle}" placeholder="Job Title" autofocus>
+            <input type="text" name="company" th:field="*{companyName}" placeholder="Company Name">
+            <input type="number" name="salary" th:field="*{salary}" placeholder="Salary">
+
+            <select name="experience">
+                <option value="" selected disabled hidden>Experience Level</option>
+                <option th:each="experience : ${T(com.example.javacancy.Experience).values()}"
+                        th:value="${experience}"
+                        th:text="${experience}">
+                </option>
+            </select>
+
+            <select name="location">
+                <option value="" selected disabled hidden>Location</option>
+                <option th:each="location : ${T(com.example.javacancy.Location).values()}"
+                        th:value="${location}"
+                        th:text="${location}">
+                </option>
+            </select>
+            <textarea name="jobDescription" id="" cols="30" rows="10" th:field="*{jobDescription}" placeholder="Job Description"></textarea>
+            <div id="addVacancyButtons">
+                <input type="submit" value="Publish" id="addVacancyPublishButton">
+                <a href="/" id="addVacancyCancelButton">Cancel</a>
+            </div>
+        </form>
+
+    </div>
+    <div th:replace="templates :: footer"></div>
+
+</body>
+</html>

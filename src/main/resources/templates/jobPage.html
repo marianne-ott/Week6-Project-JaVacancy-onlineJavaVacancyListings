@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Job page</title>
+    <link type="text/css" rel="stylesheet" href="/Style.css">
+</head>
+<body>
+    <div th:replace="templates :: logo"></div>
+    <div class="content">
+        <h3 th:text="${job.getJobTitle()}"></h3>
+        <p th:text="'Company: ' + ${job.getCompanyName()}"></p>
+        <p th:text="'Location: ' + ${job.getLocation()}"></p>
+        <p th:text="'Experience: ' + ${job.getExperience()}"></p>
+        <p th:text="'Salary: ' + ${job.getSalary()}"></p>
+        <p th:text="${job.getJobDescription()}"></p>
+        <a th:href="'/application/' + ${jobId}" id="applyButton">Apply</a>
+        <a href="/" id="applyBackButton">Back To Homepage</a>
+
+        <div class="otherVacancies">
+            <div th:if="${session.currentList.size() > 1}">
+                <h3>Other vacancies you might like</h3>
+                <div th:each="otherJob : ${session.currentList}">
+                    <div th:if="${job.getJobId() != otherJob.getJobId()}">
+                        <a th:text="${otherJob.getJobTitle()}" th:href="'/vacancy/'+${otherJob.getJobId()}"></a>
+                        <p th:text="${otherJob.getCompanyName()}"></p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div th:replace="templates :: footer"></div>
+</body>
+</html>
