@@ -1,7 +1,11 @@
-# Gruppenavn/prosjektnavn: JaVacancy
-Prosjektet vårt er å lage en stillingsannonseside for Java-jobber. Funskjonene vi planlegger er en hovedside hvor arbeidssøkere kan se alle stillingsannonser med mulighet for filtrering på location, experience, salary. I tillegg skal det være funskjon for at arbeidgivere kan legge ut stillingsannonser.
+# Project: JaVacancy
+JaVacancy is an online vacancy site for jobs in java. Functions include a main page where applicants can see all available vacancies, with the ability to filter based on location, expeirence and salary range. The plan is to add a business and applicant login, for them to maintain control over vacancies posted and applications recieved and sent.
+
 Backlog: 
-- legge inn søknad
-- mine favoritter
-- bedriftsside
-- søkemotor
+- "My favorites"
+- Business login
+- Applicant login
+
+# Authors
+* kareap
+* HalvardB
